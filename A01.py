@@ -128,7 +128,6 @@ print(new_list)
 
 
 print("\n#7")
-
 even_values = [num for num in new_list if num % 2 == 0]
 odd_values = [num for num in new_list if num % 2 != 0]
 
