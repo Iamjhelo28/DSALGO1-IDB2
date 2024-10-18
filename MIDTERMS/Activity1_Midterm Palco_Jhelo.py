@@ -23,57 +23,59 @@ class Stack:
 
 
 def simulate_stack_operations():
-    S = Stack()
+    s = Stack()
 
-    print("\nS.push(5)")
-    S.push(5)
+    print("\ns.push(5)")
+    s.push(5)
 
-    print("S.push(3)")
-    S.push(3)
+    print("s.push(3)")
+    s.push(3)
 
-    print(f"len(S): {len(S)}")
+    print(f"len(s): {len(s)}")
 
-    print(f"S.pop(): {S.pop()}")
+    print(f"s.pop(): {s.pop()}")
 
-    print(f"S.is_empty(): {S.is_empty()}")
+    print(f"s.is_empty(): {s.is_empty()}")
 
-    print(f"S.pop(): {S.pop()}")
+    print(f"s.pop(): {s.pop()}")
 
-    print(f"S.is_empty(): {S.is_empty()}")
+    print(f"s.is_empty(): {s.is_empty()}")
 
     try:
-        print("S.pop()")
-        S.pop()
+        print("s.pop()")
+        s.pop()
     except IndexError as e:
         print(f"Error: {e}")
 
-    print("S.push(7)")
-    S.push(7)
+    print("s.push(7)")
+    s.push(7)
 
-    print("S.push(9)")
-    S.push(9)
+    print("s.push(9)")
+    s.push(9)
 
-    print(f"S.top(): {S.top()}")
+    print(f"s.top(): {s.top()}")
 
-    print("S.push(4)")
-    S.push(4)
+    print("s.push(4)")
+    s.push(4)
 
-    print(f"len(S): {len(S)}")
+    print(f"len(s): {len(s)}")
 
-    print(f"S.pop(): {S.pop()}")
+    print(f"s.pop(): {s.pop()}")
 
-    print("S.push(6)")
-    S.push(6)
+    print("s.push(6)")
+    s.push(6)
 
-    print("S.push(8)")
-    S.push(8)
+    print("s.push(8)")
+    s.push(8)
 
-    print(f"S.pop(): {S.pop()}\n")
+    print(f"s.pop(): {s.pop()}\n")
 
 
 simulate_stack_operations()
+
+
 def extended_stack():
-    S = Stack()
+    x = Stack()
     operations = [
         "push(5)", "push(3)", "pop()", "push(2)", "push(8)", "pop()", "pop()",
         "push(9)", "push(1)", "pop()", "push(7)", "push(6)", "pop()", "pop()",
@@ -83,11 +85,11 @@ def extended_stack():
     for op in operations:
         if op.startswith("push"):
             value = int(op[5:-1])
-            S.push(value)
+            x.push(value)
             print(f"Push {value}")
         elif op == "pop()":
-            if not S.is_empty():
-                value = S.pop()
+            if not x.is_empty():
+                value = x.pop()
                 returned_values.append(value)
                 print(f"Pop: {value}")
             else:
@@ -95,5 +97,6 @@ def extended_stack():
 
     print("\nPop Values returned:")
     print(returned_values)
+
 
 extended_stack()
